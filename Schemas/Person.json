@@ -1,0 +1,71 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Person",
+    "description": "This is a sample description about this spec.",
+    "termsOfService": "",
+    "contact": {
+      "email": ""
+    },
+    "license": {
+      "name": "",
+      "url": ""
+    },
+    "version": "v1.0.0"
+  },
+  "externalDocs": {
+    "description": "Find out more about spec",
+    "url": ""
+  },
+  "servers": [],
+  "tags": [
+    {
+      "name": "Default",
+      "description": ""
+    }
+  ],
+  "paths": {
+    "/Anlegen": {
+      "post": {
+        "summary": "Anlegen einer neuen Person",
+        "description": "",
+        "operationId": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "requestBody": {
+          "description": "Personendaten",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../Schemas/Person.json",
+                "description": "Personendaten"
+              }
+            }
+          }
+        }
+      },
+      "parameters": [
+        {
+          "in": "path",
+          "name": "AufrufID",
+          "description": "Aufruf des IDs",
+          "schema": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 99999999999,
+            "example": 45243543664
+          }
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {},
+    "securitySchemes": {}
+  }
+}
